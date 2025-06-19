@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoops Commentary Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-body">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg">
+            <div class="container mx-auto py-6 px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="flex items-center mb-4 md:mb-0">
+                        <svg class="w-10 h-10 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.728-2.728"></path>
+                        </svg>
+                        <h1 class="text-3xl font-bold">Hoops Commentary Generator</h1>
+                    </div>
+                    <div>
+                        <a href="https://github.com/dxaginfo/hoops-commentary-generator" class="inline-flex items-center px-4 py-2 bg-white text-orange-600 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"></path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto py-8 px-4">
+            <div class="max-w-5xl mx-auto">
+                <!-- Intro Section -->
+                <section class="mb-12 text-center">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Turn Your Basketball Plays Into Highlight Reels</h2>
+                    <p class="text-xl text-gray-600 mb-8">Upload your basketball play video and our AI will generate professional-sounding commentary to make your highlights more exciting!</p>
+                    <div class="flex justify-center">
+                        <div class="bg-white rounded-xl shadow-md p-6 w-full max-w-3xl">
+                            <!-- Step Indicator -->
+                            <div class="mb-8">
+                                <div class="flex items-center justify-between">
+                                    <div class="step active" data-step="1">
+                                        <div class="step-circle">1</div>
+                                        <div class="step-label">Upload</div>
+                                    </div>
+                                    <div class="step-line"></div>
+                                    <div class="step" data-step="2">
+                                        <div class="step-circle">2</div>
+                                        <div class="step-label">Customize</div>
+                                    </div>
+                                    <div class="step-line"></div>
+                                    <div class="step" data-step="3">
+                                        <div class="step-circle">3</div>
+                                        <div class="step-label">Generate</div>
+                                    </div>
+                                    <div class="step-line"></div>
+                                    <div class="step" data-step="4">
+                                        <div class="step-circle">4</div>
+                                        <div class="step-label">Download</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Multi-step Form -->
+                            <div class="steps-content">
+                                <!-- Step 1: Upload -->
+                                <div class="step-content active" data-step="1">
+                                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Upload Your Basketball Video</h3>
+                                    <p class="text-gray-600 mb-6">Upload a short clip (10-15 seconds) of a basketball play. For best results, make sure the action is clearly visible.</p>
+                                    
+                                    <div class="upload-area flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-8 mb-6 hover:border-orange-500 transition-colors">
+                                        <svg class="w-16 h-16 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                        </svg>
+                                        <p class="text-gray-500 mb-2">Drag and drop your video here or</p>
+                                        <label class="px-4 py-2 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors cursor-pointer">
+                                            Browse Files
+                                            <input type="file" id="video-upload" accept="video/*" class="hidden">
+                                        </label>
+                                    </div>
+                                    
+                                    <div id="upload-preview" class="hidden mb-6">
+                                        <h4 class="text-lg font-medium text-gray-800 mb-2">Preview:</h4>
+                                        <video id="video-preview" controls class="w-full rounded-lg"></video>
+                                    </div>
+                                    
+                                    <div class="flex justify-end">
+                                        <button id="next-step-1" class="px-6 py-3 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                                            Next Step
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2: Customize -->
+                                <div class="step-content" data-step="2">
+                                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Customize Your Commentary</h3>
+                                    <p class="text-gray-600 mb-6">Select a commentary style and add keywords to help our AI generate the perfect commentary for your video.</p>
+                                    
+                                    <div class="mb-6">
+                                        <label for="commentary-style" class="block text-gray-700 font-medium mb-2">Commentary Style:</label>
+                                        <select id="commentary-style" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                            <option value="excitable">Excitable (Energetic, enthusiastic commentary)</option>
+                                            <option value="analytical">Analytical (Technical, strategy-focused)</option>
+                                            <option value="oldschool">Old School (Classic basketball terminology)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="mb-6">
+                                        <label for="keywords" class="block text-gray-700 font-medium mb-2">Keywords (optional):</label>
+                                        <input type="text" id="keywords" placeholder="e.g., clutch, amazing dunk, buzzer beater" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                        <p class="text-sm text-gray-500 mt-1">Separate keywords with commas</p>
+                                    </div>
+                                    
+                                    <div class="flex justify-between">
+                                        <button id="prev-step-2" class="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-400 transition-colors">
+                                            Back
+                                        </button>
+                                        <button id="next-step-2" class="px-6 py-3 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors">
+                                            Next Step
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3: Generate -->
+                                <div class="step-content" data-step="3">
+                                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Generate Commentary</h3>
+                                    <p class="text-gray-600 mb-6">Click the button below to analyze your video and generate commentary.</p>
+                                    
+                                    <div id="generation-status" class="bg-gray-100 rounded-lg p-4 mb-6 text-center">
+                                        <p class="status-text text-gray-700">Ready to generate commentary</p>
+                                        <div class="progress-bar hidden mt-3">
+                                            <div class="bg-gray-300 rounded-full h-2 overflow-hidden">
+                                                <div class="progress-fill bg-orange-500 h-full rounded-full" style="width: 0%"></div>
+                                            </div>
+                                            <p class="text-sm text-gray-500 mt-1">Processing: <span class="progress-percent">0%</span></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="commentary-result" class="hidden mb-6">
+                                        <h4 class="text-lg font-medium text-gray-800 mb-2">Generated Commentary:</h4>
+                                        <div class="bg-white border border-gray-300 rounded-lg p-4">
+                                            <p id="commentary-text" class="text-gray-700"></p>
+                                            <div class="flex justify-center mt-4">
+                                                <button id="play-commentary" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors flex items-center">
+                                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 5v14l11-7z"></path>
+                                                    </svg>
+                                                    Play Audio
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex justify-between">
+                                        <button id="prev-step-3" class="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-400 transition-colors">
+                                            Back
+                                        </button>
+                                        <button id="generate-commentary" class="px-6 py-3 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors flex items-center">
+                                            <svg class="w-5 h-5 mr-2 animate-spin hidden" id="generate-spinner" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Generate Commentary
+                                        </button>
+                                        <button id="next-step-3" class="px-6 py-3 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors hidden">
+                                            Next Step
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 4: Download -->
+                                <div class="step-content" data-step="4">
+                                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Download Your Highlight</h3>
+                                    <p class="text-gray-600 mb-6">Your video with commentary is ready! Preview it below and download when you're satisfied.</p>
+                                    
+                                    <div class="mb-6">
+                                        <h4 class="text-lg font-medium text-gray-800 mb-2">Final Preview:</h4>
+                                        <div class="relative">
+                                            <video id="final-preview" controls class="w-full rounded-lg"></video>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex flex-col md:flex-row justify-between gap-4">
+                                        <button id="prev-step-4" class="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-400 transition-colors">
+                                            Back
+                                        </button>
+                                        <div class="flex flex-col md:flex-row gap-4">
+                                            <button id="download-video" class="px-6 py-3 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors flex items-center justify-center">
+                                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                                </svg>
+                                                Download Video
+                                            </button>
+                                            <button id="share-video" class="px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-colors flex items-center justify-center">
+                                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                                                </svg>
+                                                Share
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">How It Works</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                            <div class="bg-orange-100 text-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Upload</h3>
+                            <p class="text-gray-600">Upload your basketball play video (10-15 seconds recommended)</p>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                            <div class="bg-orange-100 text-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Customize</h3>
+                            <p class="text-gray-600">Choose commentary style and add keywords to influence the tone</p>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                            <div class="bg-orange-100 text-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Download</h3>
+                            <p class="text-gray-600">Get your video with professional commentary and share it!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Example Section -->
+                <section class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Example Commentaries</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-md p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Excitable Style</h3>
+                            <div class="aspect-w-16 aspect-h-9 mb-4">
+                                <div class="bg-gray-200 rounded-lg flex items-center justify-center">
+                                    <p class="text-gray-500">Video Example</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic">"OH MY GOODNESS! Did you see that crossover?! He left the defender frozen in his tracks! And then the ELEVATION on the jump shot! NOTHING BUT THE BOTTOM OF THE NET! That's what we call a SIGNATURE MOVE, folks!"</p>
+                        </div>
+                        <div class="bg-white rounded-xl shadow-md p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Analytical Style</h3>
+                            <div class="aspect-w-16 aspect-h-9 mb-4">
+                                <div class="bg-gray-200 rounded-lg flex items-center justify-center">
+                                    <p class="text-gray-500">Video Example</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic">"Notice the footwork here as he sets up the defender with a hesitation move. He's creating separation with that step-back, getting just enough space to rise up for the jumper. Excellent use of body positioning to shield the defender and square up for a high-percentage shot."</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold">Hoops Commentary Generator</h3>
+                        <p class="text-gray-400">AI-powered commentary for basketball plays</p>
+                    </div>
+                    <div>
+                        <a href="https://github.com/dxaginfo/hoops-commentary-generator" class="text-gray-400 hover:text-white transition-colors">GitHub</a>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-gray-700 text-center text-gray-400">
+                    <p>&copy; 2025 Hoops Commentary Generator. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-4 rounded-lg shadow-lg transform translate-y-24 transition-transform duration-300 flex items-center">
+        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span id="notification-text"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
