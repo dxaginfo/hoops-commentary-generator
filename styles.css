@@ -1,0 +1,213 @@
+/* General Styles */
+:root {
+    --primary: #f97316;
+    --primary-dark: #ea580c;
+    --secondary: #1f2937;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --background: #f3f4f6;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.font-body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Step Indicators */
+.step {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0 auto 8px;
+    transition: all 0.3s ease;
+}
+
+.step.active .step-circle {
+    background-color: var(--primary);
+    color: white;
+}
+
+.step.completed .step-circle {
+    background-color: #10b981;
+    color: white;
+}
+
+.step-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.step.active .step-label, 
+.step.completed .step-label {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background-color: #e5e7eb;
+    margin: 0 8px;
+    position: relative;
+    top: -18px;
+}
+
+.step.active ~ .step-line, 
+.step.completed ~ .step-line {
+    background-color: var(--primary);
+}
+
+/* Multi-step Form */
+.steps-content {
+    position: relative;
+    min-height: 300px; /* Ensure consistent height */
+}
+
+.step-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.step-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Upload Area */
+.upload-area {
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    background-color: #f8fafc;
+}
+
+/* Progress Bar */
+.progress-fill {
+    transition: width 0.3s ease;
+}
+
+/* Video Preview */
+#video-preview, #final-preview {
+    background-color: #f1f5f9;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+/* Commentary Result */
+#commentary-result {
+    transition: all 0.3s ease;
+}
+
+/* Notification Toast */
+#notification {
+    z-index: 50;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .step-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .step-label {
+        font-size: 12px;
+    }
+}
+
+/* Aspect Ratio Utility Classes */
+.aspect-w-16 {
+    position: relative;
+    padding-bottom: calc(9 / 16 * 100%);
+}
+
+.aspect-h-9 {
+    position: relative;
+}
+
+.aspect-w-16 > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Transitions */
+button {
+    transition: all 0.2s ease;
+}
+
+/* Hover Interactions */
+.upload-area:hover label {
+    transform: scale(1.05);
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5c5c5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
